@@ -12,7 +12,7 @@ Releases and Dependency Information
 
 [Leiningen](https://github.com/technomancy/leiningen) dependency information:
 
-    [org.clojure/data.generators "0.1"]
+    [org.clojure/data.generators "0.1.0"]
 
 [Maven](http://maven.apache.org/) dependency information:
 
