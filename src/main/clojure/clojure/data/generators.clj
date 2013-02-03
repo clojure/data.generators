@@ -48,12 +48,12 @@ instance you can get a repeatable basis for tests."
          (clojure.core/long (Math/floor (+ lo (* (.nextDouble *rnd*) (- hi lo)))))))
 
 (defn float
-  "Generate a float."
+  "Generate af float between 0 and 1 based on *rnd*"
   ^double []
-  (Float/intBitsToFloat (.nextInt *rnd*)))
+  (.nextFloat *rnd*))
 
 (defn double
-  "Generate a double."
+  "Generate a double between 0 and 1 based on *rnd*."
   ^double []
   (.nextDouble *rnd*))
 
@@ -88,37 +88,36 @@ instance you can get a repeatable basis for tests."
      (weighted (zipmap specs (repeat 1)))))
 
 (def long
-  "Returns a random long. Same as uniform."
+  "Returns a long based on *rnd*. Same as uniform."
   uniform)
 
 (defn int
   []
-  "Returns a random long in the int range."
+  "Returns a long based on *rnd* in the int range."
   (uniform Integer/MIN_VALUE (inc Integer/MAX_VALUE)))
 
 (defn short
   []
-  "Returns a random long in the short range."
+  "Returns a long based on *rnd* in the short range."
   (uniform Short/MIN_VALUE (inc (core/long Short/MAX_VALUE))))
 
 (defn byte
-  "Returns a random long in the byte range."
+  "Returns a long based on *rnd* in the byte range."
   ^long []
   (uniform Byte/MIN_VALUE (inc (core/int Byte/MAX_VALUE))))
 
 (defn boolean
-  
-  "Returns a random bool."
+  "Returns a bool based on *rnd*."
   []
-  (< (.nextDouble *rnd*) 0.5))
+  (.nextBoolean *rnd*))
 
 (defn printable-ascii-char
-  "Returns a random printable ascii character."
+  "Returns a char based on *rnd* in the printable ascii range."
   []
   (core/char (uniform 32 127)))
 
 (defn char
-  "Returns a random character in the range 0-65536."
+  "Returns a character based on *rnd* in the range 0-65536."
   []
   (core/char (uniform 0 65536)))
 
@@ -242,7 +241,7 @@ instance you can get a repeatable basis for tests."
    keyword])
 
 (defn scalar
-  "Returns a random scalar."
+  "Returns a scalar based on *rnd*."
   []
   (call-through (rand-nth scalars)))
 
@@ -252,13 +251,13 @@ instance you can get a repeatable basis for tests."
    [hash-map [scalars scalars]]])
 
 (defn collection
-  "Returns a random collection of scalar elements."
+  "Returns a collection of scalar elements based on *rnd*."
   []
   (let [[coll args] (rand-nth collections)]
     (apply coll (map rand-nth args))))
 
 (defn anything
-  "Returns a random scalar or collection."
+  "Returns a scalar or collection based on *rnd*."
   []
   (one-of scalar collection))
 
@@ -276,7 +275,7 @@ instance you can get a repeatable basis for tests."
         (into (empty coll) (seq as))))))
 
 (defn shuffle
-  "Shuffle coll"
+  "Shuffle coll based on *rnd*"
   [coll]
   ;; using our own fischer-yates instead of core/shuffle so that
   ;; we'll get the same shuffle, given the same *rnd*.
