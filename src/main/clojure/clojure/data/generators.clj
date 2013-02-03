@@ -282,6 +282,20 @@ instance you can get a repeatable basis for tests."
   ;; we'll get the same shuffle, given the same *rnd*.
   (fisher-yates coll))
 
+(defn reservoir-sample
+  "Reservoir sample ct items from coll, using *rnd*."
+  [ct coll]
+  (loop [result (transient (core/vec (take ct coll)))
+         n ct
+         coll (drop ct coll)]
+    (if (seq coll)
+      (let [pos (uniform 0 n)]
+        (recur (if (< pos ct) 
+                 (assoc! result pos (first coll)) 
+                 result)
+               (inc n)
+               (rest coll)))
+      (persistent! result))))
 
 
 
