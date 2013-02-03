@@ -19,11 +19,6 @@
 instance you can get a repeatable basis for tests."
      (java.util.Random. 42))
 
-(def ^:dynamic
-  *seed*
-  "Seed for random generator, rebind this to change your basis."
-  42)
-
 (defn- call-through
   "Recursively call x until it doesn't return a function."
   [x]
@@ -64,7 +59,7 @@ instance you can get a repeatable basis for tests."
 
 (defn rand-nth
   "Replacement of core/rand-nth that allows control of the
-   randomization basis (through binding *seed*)."
+   randomization basis (through binding *rnd*)."
   [coll]
   (nth coll (uniform 0 (count coll))))
 
@@ -284,7 +279,7 @@ instance you can get a repeatable basis for tests."
   "Shuffle coll"
   [coll]
   ;; using our own fischer-yates instead of core/shuffle so that
-  ;; we'll get the same shuffle, given the same random *seed*.
+  ;; we'll get the same shuffle, given the same *rnd*.
   (fisher-yates coll))
 
 
