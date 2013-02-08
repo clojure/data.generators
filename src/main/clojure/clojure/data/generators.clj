@@ -10,8 +10,10 @@
 (ns ^{:author "Stuart Halloway"
       :doc "Data generators for Clojure."}
   clojure.data.generators
-  (:refer-clojure :exclude [byte char long int short float double boolean string symbol keyword list vec set hash-map name rand-nth byte-array boolean-array short-array char-array int-array long-array float-array double-array shuffle])
+  (:refer-clojure :exclude [byte char long int short float double boolean string symbol keyword list vec set hash-map name rand-nth byte-array boolean-array short-array char-array int-array long-array float-array double-array shuffle bigint bigdec])
   (:require [clojure.core :as core]))
+
+(set! *warn-on-reflection* true)
 
 (def ^:dynamic ^java.util.Random
      *rnd*
@@ -91,6 +93,12 @@ instance you can get a repeatable basis for tests."
   "Returns a long based on *rnd*. Same as uniform."
   uniform)
 
+(defn ratio
+  "Generate a ratio, with numerator and denominator uniform longs
+   or as specified"
+  ([] (ratio long long))
+  ([num-gen denom-gen] (/ (num-gen) (denom-gen))))
+
 (defn int
   []
   "Returns a long based on *rnd* in the int range."
@@ -163,6 +171,19 @@ instance you can get a repeatable basis for tests."
              (aset arr i (core/byte (call-through f))))
            arr)))
 
+;; TODO: sensible default distributions for bigint, bigdec
+(defn bigint
+  ^clojure.lang.BigInt []
+  (loop []
+    (let [i (try
+             (BigInteger. ^bytes (byte-array byte))
+             (catch NumberFormatException e :retry))]
+      (if (= i :retry) (recur) (core/bigint i)))))
+
+(defn bigdec
+  []
+  (BigDecimal. (.toBigInteger (bigint)) (geometric 0.01)))
+
 (defn vec
   "Create a vec with elements from f and sized from sizer."
   ([f] (vec f default-sizer))
@@ -219,16 +240,26 @@ instance you can get a repeatable basis for tests."
           (name-body sizer))))
 
 (defn symbol
-  "Create a symbol sized from sizer."
-  ([] (core/symbol (name)))
-  ([sizer]
-     (core/symbol (name sizer))))
+  "Create a non-namepsaced symbol sized from sizer."
+  ([] (symbol default-sizer))
+  ([sizer] (core/symbol (name sizer))))
 
 (defn keyword
-  "Create a keyword sized from sizer."
-  ([] (core/keyword (name)))
-  ([sizer]
-     (core/keyword (name sizer))))
+  "Create a non-namespaced keyword sized from sizer."
+  ([] (keyword default-sizer))
+  ([sizer] (core/keyword (name sizer))))
+
+(defn uuid
+  "Create a UUID based on uniform distribution of low and high parts."
+  []
+  (java.util.UUID. (long) (long)))
+
+(defn date
+  "Create a date with geoemetric mean around base. Defaults to
+   #inst \"2007-10-16T00:00:00.000-00:00\""
+  ([] (date #inst "2007-10-16T00:00:00.000-00:00"))
+  ([^java.util.Date base]
+     (java.util.Date. (geometric (/ 1 (.getTime base))))))
 
 (def scalars
   [(constantly nil)
@@ -238,7 +269,12 @@ instance you can get a repeatable basis for tests."
    printable-ascii-char
    string
    symbol
-   keyword])
+   keyword
+   uuid
+   date
+   ratio
+   bigint
+   bigdec])
 
 (defn scalar
   "Returns a scalar based on *rnd*."
