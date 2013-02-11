@@ -139,7 +139,7 @@ instance you can get a repeatable basis for tests."
   "Create a list with elements from f and sized from sizer."
   ([f] (list f default-sizer))
   ([f sizer]
-     (reps sizer f)))
+     (apply core/list (reps sizer f))))
 
 (defmacro primitive-array
   [type]
