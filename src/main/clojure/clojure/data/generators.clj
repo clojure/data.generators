@@ -100,13 +100,13 @@ instance you can get a repeatable basis for tests."
   ([num-gen denom-gen] (/ (num-gen) (denom-gen))))
 
 (defn int
-  []
   "Returns a long based on *rnd* in the int range."
+  []
   (uniform Integer/MIN_VALUE (inc Integer/MAX_VALUE)))
 
 (defn short
-  []
   "Returns a long based on *rnd* in the short range."
+  []
   (uniform Short/MIN_VALUE (inc (core/long Short/MAX_VALUE))))
 
 (defn byte
@@ -325,13 +325,9 @@ instance you can get a repeatable basis for tests."
          coll (drop ct coll)]
     (if (seq coll)
       (let [pos (uniform 0 n)]
-        (recur (if (< pos ct) 
-                 (assoc! result pos (first coll)) 
+        (recur (if (< pos ct)
+                 (assoc! result pos (first coll))
                  result)
                (inc n)
                (rest coll)))
       (persistent! result))))
-
-
-
-
