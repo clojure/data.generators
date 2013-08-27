@@ -12,14 +12,14 @@ Releases and Dependency Information
 
 [Leiningen](https://github.com/technomancy/leiningen) dependency information:
 
-    [org.clojure/data.generators "0.1.0"]
+    [org.clojure/data.generators "0.1.2"]
 
 [Maven](http://maven.apache.org/) dependency information:
 
     <dependency>
       <groupId>org.clojure</groupId>
       <artifactId>data.generators</artifactId>
-      <version>0.1.0</version>
+      <version>0.1.2</version>
     </dependency>
 
 Developer Information
