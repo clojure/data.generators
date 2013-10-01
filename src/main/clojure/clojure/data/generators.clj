@@ -43,7 +43,7 @@ instance you can get a repeatable basis for tests."
                            (Math/log (- 1.0 p))))))
 
 (defn uniform
-  "Uniform distribution from lo (inclusive) to high (exclusive).
+  "Uniform distribution from lo (inclusive) to hi (exclusive).
    Defaults to range of Java long."
   (^long [] (.nextLong *rnd*))
   (^long[lo hi] {:pre [(< lo hi)]}
@@ -206,7 +206,7 @@ instance you can get a repeatable basis for tests."
                    (reps sizer fv)))))
 
 (defn string
-  "Create a string with chars from v and sized from sizer."
+  "Create a string with chars from f and sized from sizer."
   ([] (string printable-ascii-char))
   ([f] (string f default-sizer))
   ([f sizer] (apply str (reps sizer f))))
@@ -255,7 +255,7 @@ instance you can get a repeatable basis for tests."
   (java.util.UUID. (long) (long)))
 
 (defn date
-  "Create a date with geoemetric mean around base. Defaults to
+  "Create a date with geoemetric mean around base, which defaults to
    #inst \"2007-10-16T00:00:00.000-00:00\""
   ([] (date #inst "2007-10-16T00:00:00.000-00:00"))
   ([^java.util.Date base]
