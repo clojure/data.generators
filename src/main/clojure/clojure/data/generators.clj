@@ -50,7 +50,7 @@ instance you can get a repeatable basis for tests."
          (clojure.core/long (Math/floor (+ lo (* (.nextDouble *rnd*) (- hi lo)))))))
 
 (defn float
-  "Generate af float between 0 and 1 based on *rnd*"
+  "Generate a float between 0 and 1 based on *rnd*"
   ^double []
   (.nextFloat *rnd*))
 
