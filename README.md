@@ -27,6 +27,8 @@ Developer Information
 
 * [GitHub project](https://github.com/clojure/data.generators)
 
+* [API docs](http://clojure.github.io/data.generators/)
+
 * [Bug Tracker](http://dev.clojure.org/jira/browse/DGEN)
 
 * [Continuous Integration](http://build.clojure.org/job/data.generators/)
