@@ -16,6 +16,7 @@
    :dynamic true,
    :line 18,
    :var-type "var",
+   :arglists nil,
    :doc
    "Random instance for use in generators. By consistently using this\ninstance you can get a repeatable basis for tests.",
    :namespace "clojure.data.generators",
@@ -271,18 +272,19 @@
    :namespace "clojure.data.generators",
    :wiki-url
    "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/list"}
-  {:name "long",
-   :doc "Returns a long based on *rnd*. Same as uniform.",
-   :var-type "var",
-   :line 92,
-   :namespace "clojure.data.generators",
-   :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/long",
+  {:raw-source-url
+   "https://github.com/clojure/data.generators/raw/bf2eb5288fb59045041aec01628a7f53104d84ca/src/main/clojure/clojure/data/generators.clj",
+   :name "long",
+   :file "src/main/clojure/clojure/data/generators.clj",
    :source-url
    "https://github.com/clojure/data.generators/blob/bf2eb5288fb59045041aec01628a7f53104d84ca/src/main/clojure/clojure/data/generators.clj#L92",
-   :raw-source-url
-   "https://github.com/clojure/data.generators/raw/bf2eb5288fb59045041aec01628a7f53104d84ca/src/main/clojure/clojure/data/generators.clj",
-   :file "src/main/clojure/clojure/data/generators.clj"}
+   :line 92,
+   :var-type "var",
+   :arglists nil,
+   :doc "Returns a long based on *rnd*. Same as uniform.",
+   :namespace "clojure.data.generators",
+   :wiki-url
+   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/long"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/bf2eb5288fb59045041aec01628a7f53104d84ca/src/main/clojure/clojure/data/generators.clj",
    :name "long-array",
