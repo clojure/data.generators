@@ -240,7 +240,7 @@ instance you can get a repeatable basis for tests."
           (name-body sizer))))
 
 (defn symbol
-  "Create a non-namepsaced symbol sized from sizer."
+  "Create a non-namespaced symbol sized from sizer."
   ([] (symbol default-sizer))
   ([sizer] (core/symbol (name sizer))))
 
@@ -255,7 +255,7 @@ instance you can get a repeatable basis for tests."
   (java.util.UUID. (long) (long)))
 
 (defn date
-  "Create a date with geometric mean around base. Defaults to
+  "Create a date with geometric mean around base which defaults to
    #inst \"2007-10-16T00:00:00.000-00:00\""
   ([] (date #inst "2007-10-16T00:00:00.000-00:00"))
   ([^java.util.Date base]
