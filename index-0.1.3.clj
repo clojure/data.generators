@@ -2,8 +2,7 @@
  ({:doc "Data generators for Clojure.",
    :author "Stuart Halloway",
    :name "clojure.data.generators",
-   :wiki-url
-   "http://clojure.github.com/data.generators/clojure.data.generators-api.html",
+   :wiki-url "http://clojure.github.io/data.generators/index.html",
    :source-url
    "https://github.com/clojure/data.generators/blob/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj"}),
  :vars
@@ -21,7 +20,7 @@
    "Random instance for use in generators. By consistently using this\ninstance you can get a repeatable basis for tests.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/*rnd*"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/*rnd*"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "anything",
@@ -34,7 +33,7 @@
    :doc "Returns a scalar or collection based on *rnd*.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/anything"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/anything"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "boolean",
@@ -47,7 +46,7 @@
    :doc "Returns a bool based on *rnd*.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/boolean"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/boolean"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "boolean-array",
@@ -60,7 +59,7 @@
    :doc "Create an array with elements from f and sized from sizer.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/boolean-array"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/boolean-array"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "byte",
@@ -73,7 +72,7 @@
    :doc "Returns a long based on *rnd* in the byte range.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/byte"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/byte"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "byte-array",
@@ -86,7 +85,7 @@
    :doc "Create an array with elements from f and sized from sizer.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/byte-array"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/byte-array"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "char",
@@ -99,7 +98,7 @@
    :doc "Returns a character based on *rnd* in the range 0-65536.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/char"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/char"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "char-array",
@@ -112,7 +111,7 @@
    :doc "Create an array with elements from f and sized from sizer.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/char-array"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/char-array"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "collection",
@@ -125,7 +124,7 @@
    :doc "Returns a collection of scalar elements based on *rnd*.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/collection"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/collection"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "date",
@@ -139,7 +138,7 @@
    "Create a date with geometric mean around base which defaults to\n#inst \"2007-10-16T00:00:00.000-00:00\"",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/date"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/date"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "default-sizer",
@@ -153,7 +152,7 @@
    "Default sizer used to run tests. If you want a specific distribution,\ncreate your own and pass it to a fn that wants a sizer.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/default-sizer"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/default-sizer"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "double",
@@ -166,7 +165,7 @@
    :doc "Generate a double between 0 and 1 based on *rnd*.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/double"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/double"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "double-array",
@@ -179,7 +178,7 @@
    :doc "Create an array with elements from f and sized from sizer.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/double-array"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/double-array"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "float",
@@ -192,7 +191,7 @@
    :doc "Generate a float between 0 and 1 based on *rnd*",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/float"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/float"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "float-array",
@@ -205,7 +204,7 @@
    :doc "Create an array with elements from f and sized from sizer.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/float-array"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/float-array"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "geometric",
@@ -218,7 +217,7 @@
    :doc "Geometric distribution with mean 1/p.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/geometric"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/geometric"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "hash-map",
@@ -232,7 +231,7 @@
    "Create a hash-map with keys from fk, vals from fv, and\nsized from sizer.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/hash-map"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/hash-map"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "int",
@@ -245,7 +244,7 @@
    :doc "Returns a int based on *rnd* in the int range.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/int"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/int"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "int-array",
@@ -258,7 +257,7 @@
    :doc "Create an array with elements from f and sized from sizer.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/int-array"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/int-array"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "keyword",
@@ -271,7 +270,7 @@
    :doc "Create a non-namespaced keyword sized from sizer.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/keyword"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/keyword"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "list",
@@ -284,7 +283,7 @@
    :doc "Create a list with elements from f and sized from sizer.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/list"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/list"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "long",
@@ -297,7 +296,7 @@
    :doc "Returns a long based on *rnd*. Same as uniform.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/long"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/long"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "long-array",
@@ -310,7 +309,7 @@
    :doc "Create an array with elements from f and sized from sizer.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/long-array"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/long-array"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "one-of",
@@ -324,7 +323,7 @@
    "Generates one of the specs passed in, with equal probability.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/one-of"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/one-of"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "printable-ascii-char",
@@ -337,7 +336,7 @@
    :doc "Returns a char based on *rnd* in the printable ascii range.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/printable-ascii-char"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/printable-ascii-char"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "rand-nth",
@@ -351,7 +350,7 @@
    "Replacement of core/rand-nth that allows control of the\nrandomization basis (through binding *rnd*).",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/rand-nth"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/rand-nth"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "ratio",
@@ -365,7 +364,7 @@
    "Generate a ratio, with numerator and denominator uniform longs\nor as specified",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/ratio"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/ratio"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "reps",
@@ -378,7 +377,7 @@
    :doc "Returns sizer repetitions of f (or (f) if f is a fn).",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/reps"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/reps"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "reservoir-sample",
@@ -391,7 +390,7 @@
    :doc "Reservoir sample ct items from coll, using *rnd*.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/reservoir-sample"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/reservoir-sample"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "scalar",
@@ -404,7 +403,7 @@
    :doc "Returns a scalar based on *rnd*.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/scalar"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/scalar"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "set",
@@ -417,7 +416,7 @@
    :doc "Create a set with elements from f and sized from sizer.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/set"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/set"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "short",
@@ -430,7 +429,7 @@
    :doc "Returns a short based on *rnd* in the short range.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/short"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/short"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "short-array",
@@ -443,7 +442,7 @@
    :doc "Create an array with elements from f and sized from sizer.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/short-array"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/short-array"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "shuffle",
@@ -456,7 +455,7 @@
    :doc "Shuffle coll based on *rnd*",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/shuffle"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/shuffle"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "string",
@@ -469,7 +468,7 @@
    :doc "Create a string with chars from f and sized from sizer.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/string"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/string"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "symbol",
@@ -482,7 +481,7 @@
    :doc "Create a non-namespaced symbol sized from sizer.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/symbol"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/symbol"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "tuple",
@@ -495,7 +494,7 @@
    :doc "Generate a tuple with one element from each generator.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/tuple"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/tuple"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "uniform",
@@ -509,7 +508,7 @@
    "Uniform distribution from lo (inclusive) to hi (exclusive).\nDefaults to range of Java long.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/uniform"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/uniform"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "uuid",
@@ -523,7 +522,7 @@
    "Create a UUID based on uniform distribution of low and high parts.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/uuid"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/uuid"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "vec",
@@ -536,7 +535,7 @@
    :doc "Create a vec with elements from f and sized from sizer.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/vec"}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/vec"}
   {:raw-source-url
    "https://github.com/clojure/data.generators/raw/df73726b374c14170bd3b468f479880a61ffb0bf/src/main/clojure/clojure/data/generators.clj",
    :name "weighted",
@@ -550,4 +549,4 @@
    "Given a map of generators and weights, return a value from one of\nthe generators, selecting generator based on weights.",
    :namespace "clojure.data.generators",
    :wiki-url
-   "http://clojure.github.com/data.generators//clojure.data.generators-api.html#clojure.data.generators/weighted"})}
+   "http://clojure.github.io/data.generators//index.html#clojure.data.generators/weighted"})}
