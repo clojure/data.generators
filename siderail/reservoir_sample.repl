@@ -1,0 +1,4 @@
+(require '[clojure.data.generators :as gen])
+
+;; should have all 6
+(frequencies (repeatedly 1000 #(gen/reservoir-sample 1 (range 6))))

@@ -324,7 +324,7 @@ instance you can get a repeatable basis for tests."
          n ct
          coll (drop ct coll)]
     (if (seq coll)
-      (let [pos (uniform 0 n)]
+      (let [pos (uniform 0 (inc n))]
         (recur (if (< pos ct)
                  (assoc! result pos (first coll))
                  result)
