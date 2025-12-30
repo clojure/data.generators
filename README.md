@@ -13,19 +13,19 @@ This project follows the version scheme MAJOR.MINOR.PATCH where each component p
 
 [CLI/`deps.edn`](https://clojure.org/reference/deps_edn) dependency information:
 ```clojure
-org.clojure/data.generators {:mvn/version "1.1.0"}
+org.clojure/data.generators {:mvn/version "1.1.1"}
 ```
 
 [Leiningen](https://github.com/technomancy/leiningen) dependency information:
 
-    [org.clojure/data.generators "1.1.0"]
+    [org.clojure/data.generators "1.1.1"]
 
 [Maven](https://maven.apache.org/) dependency information:
 
     <dependency>
       <groupId>org.clojure</groupId>
       <artifactId>data.generators</artifactId>
-      <version>1.1.0</version>
+      <version>1.1.1</version>
     </dependency>
 
 Developer Information
